@@ -1,0 +1,27 @@
+1.Write a blog on Difference between HTTP1.1 vs HTTP2?
+
+ http 1.1 : - in this method client will ask request and get response for it.
+             after that client can make request for another one.
+  htttp 2 :  in this method client can make multi request before get response.it perform multitasking
+
+2.Write a blog about objects and its internal representation in Javascript?
+ 
+  Every object has some property associated with some value. These values can be accessed using these properties associated with them.
+  ex: var myCar = new Object(); //create obj
+       myCar.name ="hundai";
+       myCar.model= 2021;
+       myCar.color = " white";
+
+3.Read about IP address, port, HTTP methods, MAC address?
+
+IP ADDRESS: it assigned by an internet service provider (ISP).IP addresses are the identifier that  allows  information to be sent between devices on a network:	
+PORT: is unique identify number in a  specific service connection.
+http methods:
+      get : read data
+      post : insert data
+      put : update or modify data
+      delete :delete data.
+
+MAC ADDRESS: A MAC address (media access control address) is a 12-digit hexadecimal number
+               assigned to each device connected to the network. Primarily specified as a unique identifier 
+               during device manufacturing.
