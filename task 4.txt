@@ -1,0 +1,171 @@
+a) print odd number in an array:
+
+anonymous function :
+
+var odd= function(array){
+             for(var i = 0 ; i< array.length ; i++){
+                        if(array[i]%2!=0){
+                           console.log(array[i])
+                        } 
+                   }
+             }([1,2,3,4])
+ 
+
+IIF function:   
+(function(array){
+             for(var i = 0 ; i< array.length ; i++){
+                        if(array[i]%2!=0){
+                           console.log(array[i])
+                        } 
+                   }
+             })([1,51,32,47])
+
+arrow function:
+
+ arrow=(array) =>{
+for(var i = 0 ; i< array.length ; i++){
+                        if(array[i]%2!=0){
+                           console.log(array[i]);
+                        } 
+                   } }
+                   arrow([1,2,4,6,7]);
+
+
+b) convert all the strings to title caps in array:  
+anonymous function:
+var string = function titleCase(str) {
+    return str.toLowerCase().split(' ').map(function(word) {
+        return (word.charAt(0).toUpperCase() + word.slice(1));
+    }).join(' ');
+    }
+    console.log(string("aaa"));  
+
+
+IIF function:
+function titleCase(str) {
+    return str.toLowerCase().split(' ').map(function(word) {
+        return (word.charAt(0).toUpperCase() + word.slice(1));
+    }).join(' ');
+    }
+    console.log(titleCase("converting string to titlecase"));
+
+Arrow function:
+var arrow =(str)=> {
+    return str.toLowerCase().split(' ').map(function(word) {
+        return (word.charAt(0).toUpperCase() + word.slice(1));
+    }).join(' ');
+    }
+    console.log(arrow("aaa"));
+
+
+c)sum of all no:
+anonymous:
+function sumArray(array){
+  let sum = 0;
+  for (let i = 0; i < array.length; i += 1) 
+  {
+  sum += array[i];
+  }
+  console.log(sum);
+  return sum;
+}sumArray([1, 4, 0, 9, -3]); 
+
+
+IIF:
+function getSum(a, b, c) {
+  return a + b + c;
+}
+
+var arr = [10, 20];
+var arr2 = [30];
+
+console.log(...arr, ...arr2);
+
+var res = getSum(...arr, ...arr2);
+
+console.log(res);
+
+
+
+using arrow function: 
+sum = (a, b,c) => {
+  return(a+b+c)
+}
+  x= sum(3,7,4)
+  console.log(x)
+
+
+d) prime numbers:
+var prime= function(numArray){
+                      numArray = numArray.filter((number) => {
+                        for (var i = 2; i <= Math.sqrt(number); i++) {
+                          if (number % i === 0) return false;
+                        }
+                        return true;
+                      });
+                      console.log(numArray);
+                  };prime([1,2,3,4,7,9,10])
+E) palindrome:
+IIF function:
+function palindrome([str]) {
+ if (str == str.split('').reverse().join('')) {
+ console.log(str + ' is palindrome.');
+ }
+ else {
+ console.log(str + ' is not palindrome.');
+ }
+} palindrome("ase");
+ palindrome("asa"); palindrome("wow");
+
+
+using anonymous:
+var pali=function palindrome([str]) {
+ if (str == str.split('').reverse().join('')) {
+ console.log(str + ' is palindrome.');
+ }
+ else {
+ console.log(str + ' is not palindrome.');
+ }
+}; pali("asa"); pali("wow");
+
+
+
+
+G)remove duplicate items:
+using anonymous:
+var dup=function(array)
+{
+         let dup = [...new Set(array)];
+         console.log(dup);
+    };dup([1,1,2,3,4]);
+
+
+using IIF:
+(function(array){
+         let dup = [...new Set(array)];
+         console.log(dup);
+    })([1,1,2,3,4])
+
+
+using anonymous:
+var dup= function(array){
+                        let dup = [...new Set(array)];
+                        console.log(dup);
+                      }
+                      dup([1,4,3,2,2]);
+                       
+
+h)rotate k items:
+
+var rotate = function(arr, numberOfShifts){
+let tmp = 0;
+const leng = arr.length;
+numberOfShifts = numberOfShifts% leng;
+for(let i=0; i<numberOfShifts ;i++)
+{
+tmp= arr.pop();
+arr.unshift(tmp);
+}
+return arr
+};
+rotate([3,5,6,7,8,1],2)
